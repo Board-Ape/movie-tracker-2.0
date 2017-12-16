@@ -8,11 +8,15 @@ const initialState = {
 
 
 
-const movies = (state = initialState, action) => {
+const MoviesReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'MOVIES_FETCH_DATA_SUCCESS':
       return action.movies.results;
-
+    case 'MOVIES_HAS_ERRORED':
+      return action.hasErrored;
+    case 'MOVIES_IS_LOADING':
+      return action.isLoading;
+    
     default:
       return state;
   }
@@ -42,4 +46,4 @@ const moviesIsLoading = (state = initialState, action) => {
   }
 }
 
-export default moviesIsLoading;
+export default MoviesReducer;
