@@ -1,7 +1,5 @@
 import { combineReducers } from 'redux';
-import movies from './movies';
-import moviesHasErrored from './moviesHasErrored';
-import moviesIsLoading from './moviesIsLoading';
+import MoviesReducer from './MoviesReducer';
 import SignIn from './SignIn';
 import favorites from './favorites';
 import user from './user';
@@ -9,9 +7,7 @@ import shouldShowFavorites from './shouldShowFavorites';
 
 
 export default combineReducers({
-  movies,
-  moviesHasErrored,
-  moviesIsLoading,
+  MoviesReducer,
   SignIn,
   favorites,
   user,

@@ -15,7 +15,7 @@ const MoviesReducer = (state = initialState, action) => {
     case 'MOVIES_IS_LOADING':
       return { ...state,
         moviesIsLoading: true,
-        movies: [],
+        movies: null,
         movieHasErrored: false,
       };
 
@@ -27,10 +27,9 @@ const MoviesReducer = (state = initialState, action) => {
       };
     
     case 'MOVIES_HAS_ERRORED':
-      return {
-        ...state,
+      return {...state,
         movieIsLoading: false,
-        movies: [],
+        movies: null,
         movieHasErrored: true,
       };
     

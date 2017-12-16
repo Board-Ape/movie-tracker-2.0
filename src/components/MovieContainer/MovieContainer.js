@@ -10,24 +10,39 @@ class MovieContainer extends Component {
     super();
   }
 
-  componentDidMount() {
+  async componentWillMount() {
     console.log('MovieCardContainer',this.props);
-    this.props.fetchMovieList(`https://api.themoviedb.org/3/movie/now_playing?api_key=${key}`)
+    await this.props.fetchMovieList(`https://api.themoviedb.org/3/movie/now_playing?api_key=${key}`)
   }
 
-  render() {
+  renderMovies() {
     const movieArray = this.props.shouldShowFavorites ? this.props.favorites : this.props.movies
-    const movieCardsArray = movieArray.map( (movie) => {
+    const movieCardsArray = movieArray.map((movie) => {
       return (<MovieCard key={movie.id}
-                         poster={movie.poster_path}
-                         title={movie.title}
-                         overview={movie.overview}
-                         rating={movie.vote_average}
-                         movie={movie}/>)
-    })
+        poster={movie.poster_path}
+        title={movie.title}
+        overview={movie.overview}
+        rating={movie.vote_average}
+        movie={movie} />)
+    });
+
+  return movieCardsArray;
+    
+}
+
+  render() {
+    console.log(this.props.isLoading)
+    if (!this.props.movies) {
+      return (
+        <section>
+          Is Loading...
+        </section>
+      )
+    }
+
     return (
       <section>
-        {movieCardsArray}
+        {this.renderMovies()}
       </section>
     )
   }
