@@ -1,14 +1,12 @@
-export const moviesHasErrored = (bool) => {
+export const moviesHasErrored = () => {
   return {
-    type: 'MOVIES_HAS_ERRORED',
-    hasErrored: bool
+    type: 'MOVIES_HAS_ERRORED'
   };
 };
 
-export const moviesIsLoading = (bool) => {
+export const moviesIsLoading = () => {
   return {
-    type: 'MOVIES_IS_LOADING',
-    isLoading: bool
+    type: 'MOVIES_IS_LOADING'
   };
 };
 
@@ -21,13 +19,12 @@ export const moviesFetchDataSuccess = (movies) => {
 
 export const fetchMovieList = (url) => {
   return (dispatch) => {
-    dispatch(moviesIsLoading(true));
+    dispatch(moviesIsLoading());
       fetch(url)
         .then((response) => {
           if (!response.ok) {
             throw Error(response.statusText);
           }
-            dispatch(moviesIsLoading(false));
               return response;
             })
         .then((response) => response.json())
