@@ -31,7 +31,6 @@ class MovieContainer extends Component {
 }
 
   render() {
-    console.log(this.props.isLoading)
     if (!this.props.movies) {
       return (
         <section>
