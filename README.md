@@ -24,7 +24,7 @@ Clone this repo
 - run `npm start` PostgreSQL
 If you don't have postgresSQl go to this link for further instructions
 
-### Front Load Page
+### Front Page
 <img width="1680" alt="screen shot 2017-12-18 at 12 07 17 pm" src="https://user-images.githubusercontent.com/28741948/34123236-1f22b1a8-e3ec-11e7-9528-248c16c17a98.png">
 
 ### Card Flip Information
