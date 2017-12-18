@@ -2,7 +2,13 @@
 
 Thomas Laird, Samuel Singer, David Ryan
 
-Utilizing React/Redux in JavaScript this web application displays top 20 current movies and their descriptions.  
+Language/Library: JavaScript, React.js, Redux, HTML, SCSS
+
+Purpose/Functionality: 
+  - API fetch current top 20 movies
+  - Maintain user profile with sign-in/sign-up/sign-out
+  - Select favorites and save profile dependent selections
+  - Card flips with movie information
 
 Link to assignment repo: https://github.com/turingschool-examples/movie-tracker
 
@@ -12,10 +18,11 @@ Click one of the buttons at the top to show a dataset.  Use search to search for
 on two cards to compare them both.
 
 Clone this repo
+- run `npm install`
+- run `npm start`
 
-run `npm install`
-
-run `npm start`
+- run 'npm start' PostgreSQL
+If you don't have postgresSQl go to this link for further instructions
 
 ### Front Load Page
 <img width="1680" alt="screen shot 2017-12-18 at 12 07 17 pm" src="https://user-images.githubusercontent.com/28741948/34123236-1f22b1a8-e3ec-11e7-9528-248c16c17a98.png">
