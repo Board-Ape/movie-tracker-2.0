@@ -1,40 +1,44 @@
 /*eslint-disable camelcase*/
 
-export const moviesHasErrored = () => {
-  return {
-    type: 'MOVIES_HAS_ERRORED'
-  };
-};
+import FetchMovieActions from './FetchMovieActions';
 
-export const moviesIsLoading = () => {
-  return {
-    type: 'MOVIES_IS_LOADING'
-  };
-};
+export { FetchMovieActions };
 
-export const moviesFetchDataSuccess = (movies) => {
-  return {
-    type: 'MOVIES_FETCH_DATA_SUCCESS',
-    movies
-  };
-};
+// export const moviesHasErrored = () => {
+//   return {
+//     type: 'MOVIES_HAS_ERRORED'
+//   };
+// };
 
-export const fetchMovieList = (url) => {
-  return (dispatch) => {
-    dispatch(moviesIsLoading(true));
-    fetch(url)
-      .then((response) => {
-        if (!response.ok) {
-          throw Error(response.statusText);
-        }
-        dispatch(moviesIsLoading());
-        return response;
-      })
-      .then((response) => response.json())
-      .then((items) => dispatch(moviesFetchDataSuccess(items)))
-      .catch(() => dispatch(moviesHasErrored()));
-  };
-};
+// export const moviesIsLoading = () => {
+//   return {
+//     type: 'MOVIES_IS_LOADING'
+//   };
+// };
+
+// export const moviesFetchDataSuccess = (movies) => {
+//   return {
+//     type: 'MOVIES_FETCH_DATA_SUCCESS',
+//     movies
+//   };
+// };
+
+// export const fetchMovieList = (url) => {
+//   return (dispatch) => {
+//     dispatch(moviesIsLoading(true));
+//     fetch(url)
+//       .then((response) => {
+//         if (!response.ok) {
+//           throw Error(response.statusText);
+//         }
+//         dispatch(moviesIsLoading());
+//         return response;
+//       })
+//       .then((response) => response.json())
+//       .then((items) => dispatch(moviesFetchDataSuccess(items)))
+//       .catch(() => dispatch(moviesHasErrored()));
+//   };
+// };
 
 export const signInAttempt = (email, password) => {
   return async (dispatch) => {

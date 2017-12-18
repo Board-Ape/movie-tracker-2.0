@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import MovieCard from '../MovieCard/MovieCard';
-import { fetchMovieList } from '../../Actions';
+import { FetchMovieActions } from '../../Actions';
 import { Link } from 'react-router-dom';
 import './MovieContainer.css';
 import PropTypes from 'prop-types';
@@ -11,7 +11,7 @@ const key = require('../../Utils/key');
 class MovieContainer extends Component {
 
   componentDidMount() {
-    this.props.fetchMovieList(
+    this.props.FetchMovieActions(
       `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}`
     );
   }
@@ -77,7 +77,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchMovieList: (url) => dispatch(fetchMovieList(url))
+    FetchMovieActions: (url) => dispatch(FetchMovieActions(url))
   };
 
 };
@@ -88,7 +88,7 @@ MovieContainer.propTypes = {
   hasErrored: PropTypes.bool,
   isLoading: PropTypes.bool,
   favorites: PropTypes.array.isRequired,
-  fetchMovieList: PropTypes.func.isRequired,
+  FetchMovieActions: PropTypes.func.isRequired,
   userData: PropTypes.object
 };
 

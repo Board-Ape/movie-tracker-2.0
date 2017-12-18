@@ -9,11 +9,11 @@ import logger from 'redux-logger';
 
 import RootReducer from './Reducers';
 
+const middleware = applyMiddleware(promise, thunk, logger);
+
 const devTools =
   window.__REDUX_DEVTOOLS_EXTENSION__
   && window.__REDUX_DEVTOOLS_EXTENSION__();
-
-const middleware = applyMiddleware(thunk, promise, logger);
 
 const Store = createStore(
   RootReducer,
@@ -24,11 +24,3 @@ const Store = createStore(
 );
 
 export default Store;
-
-// export default function configureStore(initialState) {
-//   return createStore(
-//     rootReducer,
-//     initialState,
-//     composeEnhancers(applyMiddleware(thunk))
-//   );
-// }

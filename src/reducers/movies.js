@@ -5,6 +5,7 @@ const initialState = {
 };
 
 const movies = (state = initialState, action) => {
+  console.log(action)
   switch (action.type) {
   case 'MOVIES_FETCH_DATA_SUCCESS':
     return {
