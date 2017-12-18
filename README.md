@@ -18,7 +18,7 @@ run `npm install`
 run `npm start`
 
 ### Front Load Page
-<img width="1680" alt="screen shot 2017-12-18 at 12 01 20 pm" src="https://user-images.githubusercontent.com/28741948/34123018-74a80638-e3eb-11e7-8a76-fbb64f06e0bb.png">
+<img width="1680" alt="screen shot 2017-12-18 at 12 07 17 pm" src="https://user-images.githubusercontent.com/28741948/34123236-1f22b1a8-e3ec-11e7-9528-248c16c17a98.png">
 
 ### Card Flip Information
 <img width="1680" alt="screen shot 2017-12-18 at 12 01 51 pm" src="https://user-images.githubusercontent.com/28741948/34123079-a1aa0f6e-e3eb-11e7-97b0-8628e86bea2b.png">
