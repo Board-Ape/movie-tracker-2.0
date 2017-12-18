@@ -21,7 +21,7 @@ Clone this repo
 - run `npm install`
 - run `npm start`
 
-- run 'npm start' PostgreSQL
+- run `npm start` PostgreSQL
 If you don't have postgresSQl go to this link for further instructions
 
 ### Front Load Page
